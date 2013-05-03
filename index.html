@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tim Svensen</title>
+  <link href="css/libs/styles.min.css" rel="stylesheet" />
+  <!-- <link href="css/libs/styles.css" rel="stylesheet" /> -->
+</head>
+<body>
+
+
+<div id="wrapper">
+  <header>
+    <h1>Tim <span>Svensen</span></h1>
+    <h3>senior developer</h3>
+  </header>
+
+  <div id="main" role="main">
+    <iframe scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1347008535.html#_=1347293944835&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=tsvensen&amp;show_count=false&amp;show_screen_name=true&amp;size=l" class="twitter-follow-button" style="width: 169px; height: 28px;" title="Twitter Follow Button" data-twttr-rendered="true"></iframe> 
+
+    <h2>github projects</h2>
+    <div class="github-projects">
+      <p data-type="github"><strong>Takeoff</strong> current project, tenative release date April 7, 2013.</p>
+      <p data-type="github"><a class="project" id="github-equalize" href="https://github.com/tsvensen/equalize.js/">equalize.js</a> : <a id="download-equalize" href="https://github.com/tsvensen/equalize.js/zipball/master/">Download</a> it or view the <a id="github-equalize-demo" href="http://tsvensen.github.com/equalize.js/">demo</a> or on <a id="jquery-registry-equalize" href="http://plugins.jquery.com/equalize.js/">The jQuery Plugin Registry</a></p>
+
+      <p data-type="github"><a class="project" id="github-esrg" href="https://github.com/dfcb/extra-strength-responsive-grids">ESRG</a> : <a id="download-esrg" href="https://github.com/dfcb/extra-strength-responsive-grids/archive/master.zip">Download</a> it or view the <a id="github-esrg-demo" href="http://dfcb.github.com/extra-strength-responsive-grids/">demo</a> <span>(with <a id="john-polacek-esrg" href="https://twitter.com/johnpolacek">John Polacek</a> &amp; Andrew Pulley)</span></p>
+      <p>I improved the Sass implementation with the <a id="github-esrg-grid-generator" href="http://dfcb.github.com/extra-strength-responsive-grids/pull/2">gridGenerator() mixin</a> to decouple the default settings and add EM support.</p>
+
+      <p data-type="github"><a class="project" id="github-gruntstart" href="https://github.com/tsvensen/GruntStart/"><strong>Grunt</strong>Start</a> : <a id="download-gruntstart" href="https://github.com/tsvensen/gruntstart/zipball/master/">Download</a> it or view the <a id="github-gruntstart-demo" href="http://tsvensen.github.com/GruntStart/">demo</a></p>
+      <p data-type="github"><a class="project" id="github-bedrock" href="https://github.com/dfcb/Bedrock/">Bedrock</a> : <a id="download-bedrock" href="https://github.com/dfcb/bedrock/zipball/master/">Download</a> it or view the <a id="github-bedrock-demo" href="http://dfcb.github.com/Bedrock/">demo</a>. <span>Recommend ESRG above</span></p>
+    </div>
+
+    <h2>website</h2>
+    <p data-type="my-site"><a id="my-site" href="http://timsvensen.com">timsvensen.com</a></p>
+
+    <div data-type="github-profile"><a id="github-ribbon" href="https://github.com/tsvensen/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a></div>
+  </div>
+</div>
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.1.min.js"><\/script>')</script> </script>
+
+<!-- <script src="js/plugin.min.js" type="text/javascript"></script> -->
+<!-- <script src="js/plugin.js" type="text/javascript"></script> -->
+
+<script>
+  var _gaq = _gaq || [],
+      $document = $(document);
+  _gaq.push(['_setAccount', 'UA-34991331-4']);
+  _gaq.push(['_trackPageview']);
+
+  // _gaq.push(['_trackEvent', category, action]); // track event
+
+  // add event tracking to all links
+  $('a').each(function() {
+    var $link  = $(this),
+        linkID = $link.attr('id');
+    // window.console.log($link.attr('id'), $link.parent().data('type'), $link.attr('id') +'_click');
+    $document.on('click', linkID, function() { _gaq.push(['_trackEvent', $link.parent().data('type'), linkID +'_click']); })
+  });
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>
